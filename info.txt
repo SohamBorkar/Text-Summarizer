@@ -1,0 +1,29 @@
+Creating Environment in Anaconda:
+
+where conda
+above is used to see where conda is installed
+
+conda --version
+above is ued to see veresion of the coda installed
+
+conda env list
+above is uesed to see which conda environments are created 
+
+conda create --name example
+above is used to create new conda environment where example replaces your environment name
+
+conda create --name example python=3.8
+above is used to create new conda environment where example replaces your environment name with specified python version
+
+conda activate example
+above is used to activate specified conda environment, in this case it is example. once you activate the environment, you will start the environment name at starting of each line
+
+conda list
+once you are in your environment, run above to see which packages are installed in the environment
+
+conda install jupyterlab dask pandas hvplot
+all the above will be installed using one command only.
+
+conda deactivate
+to deactivate the current environment
+
