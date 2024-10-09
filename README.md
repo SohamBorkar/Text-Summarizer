@@ -9,3 +9,5 @@ Workflows
 6. update the pipeline
 7. update the main.py
 8. update the app.py
+
+config.yaml file have model cnn-dailymail model mentioned on it.

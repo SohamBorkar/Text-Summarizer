@@ -1,14 +1,28 @@
 artifacts_root: artifacts
 
   # to change the data source, edit the data_ingestion section below
+# below is for 01_data_ingestion.py
 data_ingestion:
   root_dir: artifacts/data_ingestion
   source_URL: https://github.com/SohamBorkar/Text-Summarizer/raw/refs/heads/main/summarizer-data.zip
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion
 
+# below is for 02_data_preprocessing.py
 #check for availability of all required files
 data_validation:
   root_dir: artifacts/data_validation
   STATUS_FILE: artifacts/data_validation/status.txt
   ALL_REQUIRED_FILES: ["train", "test", "validation"]
+
+# below is for 03_data_preprocessing.py
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/samsum_dataset
+  tokenizer_name: google/pegasus-cnn_dailymail
+
+# below is for 04_model_training.py
+model_trainer:
+  root_dir: artifacts/model_trainer
+  data_path: artifacts/data_transformation/samsum_dataset
+  model_ckpt: google/pegasus-cnn_dailymail
